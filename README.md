@@ -1,5 +1,7 @@
 # Phantomjs as a Rubygem
 
+Special build by k1w1 that supports arbitrary width scaling.
+
 [![Build Status](https://travis-ci.org/colszowka/phantomjs-gem.png?branch=master)](https://travis-ci.org/colszowka/phantomjs-gem)
 
 **DISCLAIMER: Alpha status, YMMV!**
