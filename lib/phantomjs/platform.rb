@@ -98,7 +98,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://dl.dropboxusercontent.com/s/er9hsshoekepibk/phantomjs-1.9.2-k1w1-linux-i686.tar.gz'
+          'https://dl.dropboxusercontent.com/s/5jb20sov23awdzx/phantomjs-1.9.2-k1w1-linux-i686.tar.bz2'
         end
       end
     end
