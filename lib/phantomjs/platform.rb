@@ -98,7 +98,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://dl.dropboxusercontent.com/s/5jb20sov23awdzx/phantomjs-1.9.2-k1w1-linux-i686.tar.bz2'
+          'https://s3.amazonaws.com/aha-hosted-files/phantomjs-2.0.1-development-linux-x86_64.tar.bz2'
         end
       end
     end
@@ -130,7 +130,7 @@ module Phantomjs
         end
 
         def package_url
-          'http://phantomjs.googlecode.com/files/phantomjs-1.9.2-macosx.zip'
+          'https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-macosx.zip'
         end
       end
     end
@@ -154,7 +154,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://phantomjs.googlecode.com/files/phantomjs-1.9.2-windows.zip'
+          'https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-windows.zip'
         end
       end
     end
