@@ -51,10 +51,12 @@ module Phantomjs
         FileUtils.mkdir_p temp_dir
 
         Dir.chdir temp_dir do
-          unless system "curl -L -O #{package_url}" or system "wget #{package_url}"
-            raise "\n\nFailed to load phantomjs! :(\nYou need to have cURL or wget installed on your system.\nIf you have, the source of phantomjs might be unavailable: #{package_url}\n\n"
+          cmd = Thread.new do
+            unless system "curl -L -O #{package_url}" or system "wget #{package_url}"
+              raise "\n\nFailed to load phantomjs! :(\nYou need to have cURL or wget installed on your system.\nIf you have, the source of phantomjs might be unavailable: #{package_url}\n\n"
+            end
           end
-
+          cmd.join # wait for curl to download
           case package_url.split('.').last
             when 'bz2'
               system "bunzip2 #{File.basename(package_url)}"
@@ -130,7 +132,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://github.com/eugene1g/phantomjs/releases/download/2.0.0-bin/phantomjs-2.0.0-macosx.zip'
+          'https://s3.amazonaws.com/aha-hosted-files/phantomjs-2.0.0-macosx.zip'
         end
       end
     end
