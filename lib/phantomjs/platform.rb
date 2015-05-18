@@ -100,7 +100,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://s3.amazonaws.com/aha-hosted-files/phantomjs-2.0.1-development-linux-x86_64.tar.bz2'
+          'https://s3.amazonaws.com/aha-hosted-files/phantomjs-2.0.0-linux-x86_64.tar.bz2'
         end
       end
     end
